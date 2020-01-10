@@ -1,0 +1,35 @@
+@import "variables";
+.footer {
+  background-color: $darkblue;
+  border: none;
+  height: 100%;
+  padding: 30px;
+  p {
+    color: $white;
+  }
+  .row-m {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .col-3 {
+      background-color: $darkblue;
+      img {
+        height: 90px;
+        margin: auto;
+      }
+      .social {
+        display: flex;
+        justify-content: flex-start;
+        li {
+          i {
+            color: white;
+          }
+        }
+      }
+      h4 {
+        color: $white;
+        font-family: $pfont;
+      }
+    }
+  }
+}
