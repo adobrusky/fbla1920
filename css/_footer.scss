@@ -6,11 +6,19 @@
   padding: 30px;
   p {
     color: $white;
+    margin-top: 20px;
+    font-size: 12px;
   }
-  .row-m {
+  .row-ms {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h4 {
+      color: $white;
+      font-family: $pfont;
+      font-size: 25px;
+      margin-top: 50px;
+    }
     .col-3 {
       background-color: $darkblue;
       img {
@@ -27,13 +35,53 @@
           }
         }
       }
+      &.contact {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        .contactInfo {
+          list-style-type: none;
+          li {
+            color: $white;
+            text-decoration: none;
+            font-family: $pfont;
+            display: flex;
+          }
+        }
+        .contactIcons {
+          @extend .contactInfo;
+          padding-right: 10px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
       .footnav {
         list-style-type: none;
-      }
-      h4 {
-        color: $white;
-        font-family: $pfont;
+        li {
+          a {
+            color: $white;
+            text-decoration: none;
+            font-family: $pfont;
+          }
+        }
       }
     }
   }
+}
+
+@media only screen and (min-width: 436px) {
+
+}
+
+@media only screen and (min-width: 620px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
 }
