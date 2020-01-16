@@ -23,7 +23,6 @@
       background-color: $darkblue;
       img {
         height: 90px;
-        margin: auto;
       }
       .social {
         display: flex;
@@ -37,22 +36,27 @@
       }
       &.contact {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         justify-content: flex-end;
-        .contactInfo {
-          list-style-type: none;
-          li {
-            color: $white;
-            text-decoration: none;
-            font-family: $pfont;
-            display: flex;
+        .contactContainer {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          .contactInfo {
+            list-style-type: none;
+            li {
+              color: $white;
+              text-decoration: none;
+              font-family: $pfont;
+              display: flex;
+            }
           }
-        }
-        .contactIcons {
-          @extend .contactInfo;
-          padding-right: 10px;
-          li {
-            margin-bottom: 5px;
+          .contactIcons {
+            @extend .contactInfo;
+            padding-right: 10px;
+            li {
+              margin-bottom: 5px;
+            }
           }
         }
       }
@@ -71,11 +75,65 @@
 }
 
 @media only screen and (min-width: 436px) {
-
+  .footer {
+    .row-ms {
+      .col-3 {
+        .social {
+          justify-content: flex-start;
+          li {
+            padding:0% 5% 0% 5%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 620px) {
-
+  .footer {
+    padding: 30px;
+    height: 500px;
+    p {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+    .row-ms {
+      flex-direction: row;
+      h4 {
+        font-size: 25px;
+        margin-top: 0px;
+      }
+      .col-3 {
+        flex-basis: 33%;
+        img {
+          height: 90px;
+        }
+        .social {
+          //justify-content: space-evenly;
+          li {
+            padding:0% 5% 0% 5%;
+          }
+        }
+        &.contact {
+          justify-content: flex-start;
+          .contactInfo {
+          }
+          .contactIcons {
+            padding-right: 10px;
+            li {
+              margin-bottom: 5px;
+            }
+          }
+        }
+        .footnav {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
