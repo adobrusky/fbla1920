@@ -1,0 +1,25 @@
+@import "variables";
+.slide-right {
+  color: $white;
+  text-align: center;
+  font-family: $pfont;
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-style: italic;
+    font-size: 20px;
+  }
+  i {
+    position:relative;
+    top: 5em;
+    border: 1px solid $white;
+    border-radius: 999px 999px;
+    padding: 10px;
+    transition: background-color .3s, transform .3s;
+    &:hover {
+      background-color: rgba(0,0,0,0.1);
+      transform: scale3d(2); //finish transform transition
+    }
+  }
+}
