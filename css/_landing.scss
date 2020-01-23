@@ -3,6 +3,10 @@
   color: $white;
   text-align: center;
   font-family: $pfont;
+  position: relative;
+  opacity: 0;
+  left: -500px;
+  transition: left 1s, opacity 1s;
   h1 {
     font-size: 40px;
   }
@@ -19,7 +23,7 @@
     transition: background-color .3s, transform .3s;
     &:hover {
       background-color: rgba(0,0,0,0.1);
-      transform: scale3d(2); //finish transform transition
+      transform: scale(1.05); //finish transform transition
     }
   }
 }
