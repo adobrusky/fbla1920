@@ -1,1 +1,19 @@
 @import "variables";
+.content {
+  .flightBg {
+    background-image: url('../img/sky.jpg');
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      color: $white;
+      font-family: $pfont;
+      text-align: center;
+    }
+    h2 {
+      font-size: 30px;
+      @extend h3;
+    }
+  }
+}

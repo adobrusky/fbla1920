@@ -4,6 +4,5 @@ function slideRight() {
 }
 
 $(document).ready(function() {
-  changeTheme();
   slideRight();
 });
