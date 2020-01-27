@@ -17,3 +17,34 @@
     }
   }
 }
+
+.flight {
+  .flightInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div {
+      padding: 20px;
+      flex-basis: 50%;
+      .passengerSelect {
+        display: flex;
+        justify-content: space-around;
+        width: 60px;
+      }
+      p , span {
+        font-family: $pfont;
+        font-size: 20px;
+        i {
+          margin-left: 5px;
+        }
+      }
+      ul {
+        list-style-type: none;
+        position: absolute;
+        li {
+          font-family: $pfont;
+        }
+      }
+    }
+  }
+}
