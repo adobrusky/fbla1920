@@ -24,25 +24,50 @@
     justify-content: space-between;
     flex-wrap: wrap;
     div {
-      padding: 20px;
       flex-basis: 50%;
+      padding: 10px;
       .passengerSelect {
         display: flex;
         justify-content: space-around;
         width: 60px;
       }
-      p , span {
+      p {
         font-family: $pfont;
         font-size: 20px;
+        transition: background-color .5s;
+        padding: 5px;
         i {
           margin-left: 5px;
+          transition: transform .5s;
         }
+      }
+      span {
+        font-family: $pfont;
+        font-size: 20px;
       }
       ul {
         list-style-type: none;
         position: absolute;
+        display: none;
+        opacity: 0;
+        transition: opacity .5s;
+        background-color: white;
+        padding: 5px;
         li {
           font-family: $pfont;
+          padding: 5px 0px 5px 0px;
+        }
+      }
+      &.activeDrop {
+        p {
+          background-color: $white;
+          i {
+            transform: rotate(180deg);
+          }
+        }
+        ul {
+          display: block;
+          opacity: 1;
         }
       }
     }
