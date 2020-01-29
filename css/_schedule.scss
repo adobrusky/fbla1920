@@ -36,8 +36,10 @@
         font-size: 20px;
         transition: background-color .5s;
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
         i {
-          margin-left: 5px;
+          margin-right: 2px;
           transition: transform .5s;
         }
       }
@@ -66,8 +68,11 @@
           }
         }
         ul {
-          display: block;
+          display: flex;
           opacity: 1;
+          &.hiddenSelect {
+            flex-direction: column;
+          }
         }
       }
     }

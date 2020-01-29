@@ -5,21 +5,13 @@ function hiddenSelection() {
 
     $('.flightInfo p').click(function() {
       if(!$(this).closest('div').hasClass('activeDrop')) {
+        $(this).closest('div').siblings('div').removeClass('activeDrop');
         $(this).closest('div').addClass('activeDrop');
       } else {
         $(this).closest('div').removeClass('activeDrop');
       }
-      console.log($(this).closest('div').hasClass('.activeDrop'));
     });
 };
-
-function closeDrops() {
-  if($('.flightInfo div').hasClass('activeDrop')) {
-    $('*:not(.flightInfo div ul)').click(function() {
-       $(this).closest('div').removeClass('activeDrop');
-    });
-  }
-}
 
 function hiddenSelectionWidth() {
   $('.flightInfo ul').each(function() {
@@ -40,5 +32,4 @@ $(document).ready(function() {
   hiddenSelection();
   passengerSelection();
   hiddenSelectionWidth();
-  closeDrops();
 });
