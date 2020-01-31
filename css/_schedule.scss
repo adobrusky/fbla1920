@@ -24,43 +24,58 @@
     justify-content: space-between;
     flex-wrap: wrap;
     div {
-      flex-basis: 50%;
-      padding: 10px;
+      transition: box-shadow .3s;
+      cursor: pointer;
       .passengerSelect {
-        display: flex;
-        justify-content: space-around;
+        justify-content: center;
         width: 60px;
+        li {
+          padding: 0px;
+          i {
+            color: $white;
+            background-color: $medgray;
+            border-radius: 3px 3px;
+            padding: 5px;
+            margin: 5px;
+          }
+        }
+        &.activeDrop {
+          display: flex;
+        }
       }
       p {
         font-family: $pfont;
         font-size: 20px;
-        transition: background-color .5s;
-        padding: 5px;
+        padding: 15px;
         display: flex;
         justify-content: space-between;
         i {
-          margin-right: 2px;
+          color: $darkergray;
           transition: transform .5s;
         }
       }
       span {
         font-family: $pfont;
         font-size: 20px;
+        margin-right: 5px;
       }
       ul {
         list-style-type: none;
         position: absolute;
-        display: none;
+        height: 0;
+        display: flex;
         opacity: 0;
-        transition: opacity .5s;
+        overflow: hidden;
+        transition: box-shadow .3s, opacity .3s;//, width .3s;
         background-color: white;
         padding: 5px;
         li {
           font-family: $pfont;
-          padding: 5px 0px 5px 0px;
+          padding: 10px 5px 10px 5px;
         }
       }
       &.activeDrop {
+        box-shadow: 1px 1px 2px $darkgray;
         p {
           background-color: $white;
           i {
@@ -68,8 +83,9 @@
           }
         }
         ul {
-          display: flex;
+          height: auto;
           opacity: 1;
+          box-shadow: 1px 1px 2px $darkgray;
           &.hiddenSelect {
             flex-direction: column;
           }
