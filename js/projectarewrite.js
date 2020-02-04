@@ -197,7 +197,7 @@ function disableNavbarButtons() {
 
 //Resizing Function
 function windowResize() {
-  screenWidth = window.innerWidth;
+  screenWidth = window.outerWidth;
   screenHeight = window.innerHeight;
   navbarResize();
   landing();

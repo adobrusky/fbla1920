@@ -6,7 +6,7 @@ function hiddenSelection() {
 
 $('.flightInfo p').click(function() {
   if(!$(this).closest('div').hasClass('activeDrop')) {
-    $(this).closest('div').siblings('div').removeClass('activeDrop');
+    $('.hiddenSelect, .passengerSelect').closest('div').removeClass('activeDrop');
     $(this).closest('div').addClass('activeDrop');
   } else {
     $(this).closest('div').removeClass('activeDrop');

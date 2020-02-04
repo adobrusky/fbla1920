@@ -24,22 +24,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .locationContainer {
+      -webkit-tap-highlight-color: transparent;
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       justify-content: center;
       flex-basis: 100%;
-      &:focus {
-        outline-style:none;
-        box-shadow:none;
-        border-color:transparent;
-      }
       .fa-plane {
         color: $lightblue;
         display: none;
       }
       .location {
         margin: 5px;
-        flex-basis: 50%;
         p {
           width: 200px;
           border: 1px solid $lightgray;
@@ -49,6 +45,7 @@
     }
     div {
       transition: box-shadow .3s;
+      -webkit-tap-highlight-color: transparent;
       cursor: pointer;
       .passengerSelect {
         justify-content: center;
@@ -122,73 +119,24 @@
 }
 
 @media only screen and (min-width: 436px) {
-  .content {
-    .flightBg {
-      height: 50vh;
-      h3 {
-      }
-      h2 {
-        font-size: 30px;
-      }
-    }
-  }
-
-  .flight {
+.flight {
     .flightInfo {
       justify-content: space-around;
-      & > p {
-        i {
-          display: none;
-        }
-      }
-      div {
-
-        .passengerSelect {
-          width: 60px;
-          li {
-            padding: 0px;
-            i {
-              padding: 5px;
-              margin: 5px;
-            }
-          }
-        }
-        p {
-          font-size: 20px;
-          padding: 15px;
-          i {
-          }
-        }
-        span {
-          font-size: 20px;
-          margin-right: 5px;
-        }
-        ul {
-          padding: 5px;
-          li {
-            padding: 10px 5px 10px 5px;
-          }
-        }
-      }
-      .locationContainer {
-        display: flex;
-        flex-basis: 100%;
-        .location {
-          margin: 5px;
-          flex-basis: 50%;
-          p {
-            width: 200px;
-            border: 1px solid $lightgray;
-            border-radius: 5px 5px;
-          }
-        }
-      }
     }
   }
 }
 
 @media only screen and (min-width: 620px) {
-
+  .flight {
+    .flightInfo {
+      .locationContainer {
+        .fa-plane {
+          display: flex;
+          margin: 0px 10px 0px 10px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
