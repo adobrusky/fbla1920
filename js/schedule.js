@@ -13,6 +13,22 @@ $('.flightInfo p').click(function() {
   }
 });
 
+function setDates() {
+  let today = new Date();
+  let parsedToday;
+  for(let i = 0; i < today.length; i++) {
+    if(today.charAt(i) == ' ') {
+      parsedToday += today.substring(i, today.length);
+    }
+    console.log(i);
+  }
+  console.log(today);
+  console.log(parsedToday);
+  $('.dateContainer input').each(function() {
+    $(this).val(today);
+  });
+}
+
 $('.hiddenSelect li').each(function() {
   $(this).click(function() {
     if(!$(this).hasClass('active')) {
@@ -61,6 +77,7 @@ $(window).resize(function() {
 
 $(document).ready(function() {
   hiddenSelection();
+  setDates();
   passengerSelection();
   hiddenSelectionWidth();
 });
