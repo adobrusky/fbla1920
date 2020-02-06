@@ -31,6 +31,7 @@ $('.hiddenSelect li').each(function() {
       setTimeout(function () {
         hiddenSelection();
         hiddenSelectionWidth();
+        makePrice();
       }, 300);
       $(this).closest('.hiddenSelect').siblings().children('span').fadeIn(300);
     }
@@ -49,13 +50,44 @@ $('i.fa.fa-plus').click(function() {
   if(passengers < 9) {
     passengers++;
     passengerSelection();
+    makePrice();
   }
 });
+
+let price = 0;
+
+function makePrice() {
+  price = 0;
+  price += passengers * 50;
+  let trip = $('.tripType li').index('.active');
+let economy = 0;
+  if(trip == 1) {
+    price += 100;
+  } else {
+    price += 50;
+  }
+
+  economy = $('.economyType li:nth-child(1)').index('.active');
+  let economyChildren = $('.economyType li').length;
+  let activeEconomy = "";
+  for(let i = 1; i <= economyChildren; i++) {
+    if($('.economyType li:nth-child(' + i + ')').hasClass('active')) {
+      activeEconomy = $('.economyType li:nth-child(' + i + ')').html();
+    }
+  }
+
+  switch
+
+
+  console.log(price);
+  console.log(economy);
+}
 
 $('i.fa.fa-minus').click(function() {
   if(passengers > 1) {
     passengers--;
     passengerSelection();
+    makePrice();
   }
 });
 
@@ -70,6 +102,7 @@ $(window).resize(function() {
 $(document).ready(function() {
   hiddenSelection();
   setDates();
+  makePrice();
   passengerSelection();
   hiddenSelectionWidth();
 });
