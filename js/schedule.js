@@ -15,15 +15,8 @@ $('.flightInfo p').click(function() {
 
 function setDates() {
   let today = new Date();
-  let parsedToday;
-  for(let i = 0; i < today.length; i++) {
-    if(today.charAt(i) == ' ') {
-      parsedToday += today.substring(i, today.length);
-    }
-    console.log(i);
-  }
-  console.log(today);
-  console.log(parsedToday);
+  let parseToday = today.toString().split(' ');
+  today = parseToday[1] + ". " + parseToday[2] + " " + parseToday[3];
   $('.dateContainer input').each(function() {
     $(this).val(today);
   });
@@ -48,7 +41,6 @@ function hiddenSelectionWidth() {
   $('.flightInfo ul').each(function() {
     let test = $(this).siblings('p').outerWidth();
     $(this).animate({width : test });
-    // finish fixing this bug
   });
 }
 
