@@ -58,16 +58,14 @@ let price = 0;
 
 function makePrice() {
   price = 0;
-  price += passengers * 50;
+  price += passengers * 25;
   let trip = $('.tripType li').index('.active');
-let economy = 0;
   if(trip == 1) {
     price += 100;
   } else {
     price += 50;
   }
 
-  economy = $('.economyType li:nth-child(1)').index('.active');
   let economyChildren = $('.economyType li').length;
   let activeEconomy = "";
   for(let i = 1; i <= economyChildren; i++) {
@@ -76,11 +74,21 @@ let economy = 0;
     }
   }
 
-  switch
-
-
-  console.log(price);
-  console.log(economy);
+  switch (activeEconomy){
+    case "Economy":
+      price += 50;
+      break;
+    case "Premium Economy":
+      price += 75;
+      break;
+    case "Business Class":
+      price += 100;
+      break;
+    case "First Class":
+      price += 150;
+      break;
+  }
+  $('.bookContainer p span').html(price);
 }
 
 $('i.fa.fa-minus').click(function() {

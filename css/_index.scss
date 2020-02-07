@@ -1,0 +1,17 @@
+@import "variables";
+.content {
+  .container {
+    padding: 50px 3% 50px 3%;
+    h2 {
+      font-family: $pfont;
+      font-size: 30px;
+      color: $darkblue;
+      padding: 0px 0px 20px 0px;
+    }
+    hr {
+      height: 5px;
+      background-color: $medblue;
+      width: 60px;
+    }
+  }
+}

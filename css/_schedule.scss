@@ -19,6 +19,7 @@
 }
 
 .flight {
+  padding: 3% 0px 3% 0px;
   .flightInfo {
     display: flex;
     justify-content: space-between;
@@ -70,9 +71,19 @@
     .bookContainer {
       display: flex;
       align-items: center;
+      flex-direction: column;
       flex-wrap: wrap;
       flex-basis: 100%;
       justify-content: center;
+      .bookButton {
+        padding: 10px;
+        color: $white;
+        font-family: $pfont;
+        border: none;
+        font-size: 20px;
+        background-color: $medblue;
+        //border-radius: 5px 5px;
+      }
       p {
         color: $darkblue;
         font-family: $pfont;
@@ -186,7 +197,17 @@
 }
 
 @media only screen and (min-width: 768px) {
-
+  .content {
+    .flightBg {
+      height: 55vh;
+      h3 {
+        font-size: 25px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
