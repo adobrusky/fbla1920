@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/projecta.css">
   <link rel="stylesheet" href="css/master.css">
-  <title>Sonic Airlines - Sources</title>
+  <title>Sonic Airlines - Apply</title>
 </head>
 <body>
   <!-- Navbar -->
@@ -40,27 +40,73 @@
     <li class="nav-items">
       <ul>
         <li class="close"><i class="fa fa-2x fa-close"></i></li>
-        <li class="item active"><a href="index.html">HOME</a></li>
-        <li class="item"><a href="apply.html">APPLY</a></li>
+        <li class="item"><a href="index.html">HOME</a></li>
+        <li class="item active"><a href="apply.html">APPLY</a></li>
         <li class="item"><a href="flyer.html">FREQUENT FLYER</a></li>
         <li class="item"><a href="schedule.html">FLIGHT SCHEDULES</a></li>
       </ul>
     </li>
   </ul>
 
-
   <!-- Content -->
   <div class="content">
-    <div class="container">
-      <h1>Works Cited</h1>
-      <p>https://i.pinimg.com/originals/90/03/b7/9003b735462db6aa3011b4df3d0bc477.jpg <br>
-      https://lh3.googleusercontent.com/JarIZ07uiTByL4eY-D4hB8FjCzSpCV9BFjQY0bc9xHTcGxDIJFsU62pMGq5reDeKw8JSnQ=s150</p>
+    <div class="container apply">
+      <h2>Flight Attendant Application</h2>
+      <hr>
+      <h3>If applying for a pilot position please contact us directly at apply@sonicair.com</h3>
+      <form class="applyForm" action="apply.html" method="post">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Age">
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+      </form>
+      </div>
     </div>
-  </div>
 
-  <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="js/projectarewrite.js"></script>
-  <script src="js/master.js"></script>
-</body>
-</html>
+    <footer class="footer">
+      <div class="row-ms">
+        <div class="col-3">
+          <img src="img/logo2.png" alt="Logo">
+          <ul class="social">
+            <li><i class="fa fa-instagram fa-2x"></i></li>
+            <li><i class="fa fa-facebook-f fa-2x"></i></li>
+            <li><i class="fa fa-snapchat-ghost fa-2x"></i></li>
+            <li><i class="fa fa-twitter fa-2x"></i></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h4>Navigation</h4>
+          <ul class="footnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="flyer.html">Frequent Flyer</a></li>
+            <li><a href="schedule.html">Flight Schedules</a></li>
+            <li><a href="sources.html">Works Cited</a></li>
+          </ul>
+        </div>
+        <div class="col-3 contact">
+          <h4>Contact</h4>
+          <div class="contactContainer">
+            <ul class="contactInfo">
+              <li>402-641-2409</li>
+              <li>support@sonicair.com</li>
+              <li>7658 O St. Lincoln, Nebraska</li>
+            </ul>
+            <ul class="contactIcons">
+              <li><i class="fa fa-phone"></i></li>
+              <li><i class="fa fa-envelope"></i></li>
+              <li><i class="fa fa-location-arrow"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <p class="watermark">Created with my own framework, ProjectA</p>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/projectarewrite.js"></script>
+    <script src="js/master.js"></script>
+  </body>
+  </html>

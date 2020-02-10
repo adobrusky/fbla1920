@@ -1,0 +1,36 @@
+@import "variables";
+.content {
+   .container.apply {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    .applyForm {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      input[type=text] {
+        width: 46%;
+        height: 50px;
+        margin: 5px;
+        border: none;
+        color: $darkblue;
+        font-family: $pfont;
+        padding: 15px;
+        background-color: $vlightgray;
+        font-size: 17px;
+        &:focus {
+          outline: 1px solid $lightblue;
+        }
+      }
+      input[type=radio] {
+        
+      }
+    }
+  }
+}
