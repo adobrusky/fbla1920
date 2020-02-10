@@ -58,55 +58,70 @@
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
         <input type="text" placeholder="Age">
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
+        <input type="text" placeholder="Title">
+        <div class="genderSelect">
+          <label class="customRadio">Male
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="customRadio">Female
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <textarea placeholder="Tell us a bit about yourself..."></textarea>
+        <textarea placeholder="How many languages do you speak on an intermediate level, or better?"></textarea>
+        <textarea placeholder="Why do you believe you can be a good flight attendant?"></textarea>
+        <textarea placeholder="What do you think characterize a great flight attendant nowadays?"></textarea>
+        <textarea placeholder="What do you think are the main duties of the flight attendants on the short distance and long distance flight?"></textarea>
+        <button type="button" name="book" class="submitButton">Submit</button>
       </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="row-ms">
+      <div class="col-3">
+        <img src="img/logo2.png" alt="Logo">
+        <ul class="social">
+          <li><i class="fa fa-instagram fa-2x"></i></li>
+          <li><i class="fa fa-facebook-f fa-2x"></i></li>
+          <li><i class="fa fa-snapchat-ghost fa-2x"></i></li>
+          <li><i class="fa fa-twitter fa-2x"></i></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h4>Navigation</h4>
+        <ul class="footnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="flyer.html">Frequent Flyer</a></li>
+          <li><a href="schedule.html">Flight Schedules</a></li>
+          <li><a href="sources.html">Works Cited</a></li>
+        </ul>
+      </div>
+      <div class="col-3 contact">
+        <h4>Contact</h4>
+        <div class="contactContainer">
+          <ul class="contactInfo">
+            <li>402-641-2409</li>
+            <li>support@sonicair.com</li>
+            <li>7658 O St. Lincoln, Nebraska</li>
+          </ul>
+          <ul class="contactIcons">
+            <li><i class="fa fa-phone"></i></li>
+            <li><i class="fa fa-envelope"></i></li>
+            <li><i class="fa fa-location-arrow"></i></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </footer>
+  <p class="watermark">Created with my own framework, ProjectA</p>
 
-    <footer class="footer">
-      <div class="row-ms">
-        <div class="col-3">
-          <img src="img/logo2.png" alt="Logo">
-          <ul class="social">
-            <li><i class="fa fa-instagram fa-2x"></i></li>
-            <li><i class="fa fa-facebook-f fa-2x"></i></li>
-            <li><i class="fa fa-snapchat-ghost fa-2x"></i></li>
-            <li><i class="fa fa-twitter fa-2x"></i></li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <h4>Navigation</h4>
-          <ul class="footnav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="apply.html">Apply</a></li>
-            <li><a href="flyer.html">Frequent Flyer</a></li>
-            <li><a href="schedule.html">Flight Schedules</a></li>
-            <li><a href="sources.html">Works Cited</a></li>
-          </ul>
-        </div>
-        <div class="col-3 contact">
-          <h4>Contact</h4>
-          <div class="contactContainer">
-            <ul class="contactInfo">
-              <li>402-641-2409</li>
-              <li>support@sonicair.com</li>
-              <li>7658 O St. Lincoln, Nebraska</li>
-            </ul>
-            <ul class="contactIcons">
-              <li><i class="fa fa-phone"></i></li>
-              <li><i class="fa fa-envelope"></i></li>
-              <li><i class="fa fa-location-arrow"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <p class="watermark">Created with my own framework, ProjectA</p>
-
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/projectarewrite.js"></script>
-    <script src="js/master.js"></script>
-  </body>
-  </html>
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/projectarewrite.js"></script>
+  <script src="js/master.js"></script>
+</body>
+</html>
