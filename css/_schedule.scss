@@ -56,6 +56,7 @@
         input {
           width: 200px;
           margin: 5px;
+          cursor: pointer;
           border-radius: 5px 5px;
           height: 57px;
           color: $darkblue;
@@ -82,7 +83,8 @@
         border: none;
         font-size: 20px;
         background-color: $medblue;
-        //border-radius: 5px 5px;
+        border-radius: 3px 3px;
+        cursor: pointer;
       }
       p {
         color: $darkblue;

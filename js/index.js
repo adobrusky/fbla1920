@@ -24,6 +24,18 @@ function changeTheme() {
   }
 };
 
+$('.scrollDown').click(function(){
+  let scrollAmount = 0;
+  if(screenWidth >= large) {
+    scrollAmount = $('.landing').height() - $('.nav').height();
+  } else if(screenWidth >= medium) {
+    scrollAmount = $('.landing').height();
+  } else {
+    scrollAmount = $('.landing').height();
+  }
+  $(window).scrollTop(scrollAmount);
+});
+
 $(window).scroll(function() {
   scroll = $(window).scrollTop();
   changeTheme();
