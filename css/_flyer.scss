@@ -9,17 +9,29 @@
   }
   & > h1 {
     font-family: $pfont;
-    font-size: 30px;
+    font-size: 25px;
     color: $darkblue;
     margin: 20px 0px 0px 20px;
   }
-  .row-m {
-    justify-content: center;
+  & > h3 {
+    font-size: 15px;
+    margin-top: 20px;
+    color: $darkblue;
+    margin: 10px 0px 0px 20px;
+    width: 90%;
+  }
+  .row-m.saverGrid {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     .col-3 {
       margin: 10% 3% 0% 3%;
       max-width: 300px;
       flex-basis: 100%;
       text-align: center;
+      &:nth-child(2) {
+        order: 1;
+      }
       .saverTitle {
         color: $darkblue;
         padding: 30px;
@@ -69,9 +81,89 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .saver.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    hr {
+      margin: 20px 20px 20px 5%;
+    }
+    & > h1 {
+      font-size: 30px;
+      margin: 20px 0px 0px 5%;
+    }
+    & > h3 {
+      font-size: 15px;
+      margin: 10px 0px 0px 5%;
+    }
+    .row-m.saverGrid {
+      justify-content: center;
+      flex-direction: row;
+      .col-3 {
+        margin: 3% 5px 3% 5px;
+        max-width: 300px;
 
+        .saverTitle {
+          color: $darkblue;
+          padding: 30px;
+          background-color: $medblue;
+          h1 {
+            font-family: $pfont;
+            font-size: 30px;
+            color: $white;
+          }
+          h4 {
+            span {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-
+  .saver.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    hr {
+      margin: 20px 20px 20px 7%;
+    }
+    & > h1 {
+      font-size: 35px;
+      margin: 20px 0px 0px 7%;
+    }
+    & > h3 {
+      font-size: 17px;
+      margin: 10px 0px 0px 7%;
+      width: 70%;
+    }
+    .row-m.saverGrid {
+      justify-content: center;
+      flex-direction: row;
+      .col-3 {
+        margin: 3% 1% 3% 1%;
+        max-width: 300px;
+        &:nth-child(2) {
+          order: 0;
+          transform: scale(1.05);
+        }
+        .saverTitle {
+          color: $darkblue;
+          padding: 30px;
+          background-color: $medblue;
+          h1 {
+            font-family: $pfont;
+            font-size: 30px;
+            color: $white;
+          }
+          h4 {
+            span {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

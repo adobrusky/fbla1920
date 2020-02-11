@@ -5,10 +5,13 @@
     flex-direction: column;
     h2 {
       font-size: 25px;
+      margin-top: 20px;
+      color: $darkblue;
     }
     h3 {
       font-size: 15px;
       margin-top: 20px;
+      color: $darkblue;
     }
     hr {
       height: 5px;
@@ -21,6 +24,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 30px;
+      margin-bottom: 40px;
       input[type=text] {
         width: 46%;
         height: 50px;
