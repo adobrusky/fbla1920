@@ -1,11 +1,11 @@
-// Global Variables
+
 const small = 436;
 const medium = 768;
 const large = 1024;
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 
-//------------ Navbar Functions
+
 let navbarWidth = $('.nav-items').width();
 let navbarHeight;
 let navbarTransitionSpeed = 500;
@@ -55,10 +55,10 @@ function hideNavbar() {
   if($('.nav').hasClass('hide')) {
     let current = $(window).scrollTop();
     if(screenWidth < large) {
-      if (current > prev && current > navbarHeight) {// If Scrolling Down
+      if (current > prev && current > navbarHeight) {
         $('.nav').css('top', -navbarHeight + 'px');
         closeDropdowns();
-      } else {// If Scrolling Up
+      } else {
         $('.nav').css('top', 0 + 'px');
       };
     };
@@ -126,7 +126,7 @@ function active() {
   });
 };
 
-//Dropdown functions
+
 function dropdown(element) {
   let clicked = $(element).parent().children('.dropdown');
   let clickedChildren = clicked.find('.dropdown');
@@ -137,7 +137,7 @@ function dropdown(element) {
   });
 };
 
-//Closes dropdowns and calculates the necessary width
+
 function closeDropdowns() {
   if(screenWidth < medium) {
     $('.dropdown').show();
@@ -149,7 +149,7 @@ function closeDropdowns() {
   $('.dropdown').hide();
 };
 
-//Items with fade class fade in when entering viewport
+
 function fade() {
   $('.fade').each(function() {
     let elementTop = $(this).offset().top + 1;
@@ -160,7 +160,7 @@ function fade() {
   });
 };
 
-//Sets the height of the landing an adds a margin if necessary
+
 function landing() {
   if($('.content').has('.landing')) {
     $('.content').has('.landing').css('marginTop', '0');
@@ -168,12 +168,12 @@ function landing() {
   $('.landing').css({'minHeight':screenHeight, 'backgroundPosition':'center ' + ($(window).scrollTop() * 0.4) + 'px'});
 };
 
-//Carousel functions
+
 function carousel() {
   $('.carousel-images .active img').css('display', 'block');
 };
 
-//Disabled all transitions while resizing to prevent weird resize animations
+
 function disableTransitions() {
   $('*').addClass('disabletransition');
   setTimeout(function () {
@@ -181,7 +181,7 @@ function disableTransitions() {
   }, 200);
 };
 
-//Disables button temporarily when clicked to prevent spamming
+
 function disableButton(element) {
   $(element).addClass('disabled');
   setTimeout(function () {
@@ -195,7 +195,7 @@ function disableNavbarButtons() {
   disableButton($('.overlay'));
 };
 
-//Resizing Function
+
 function windowResize() {
   screenWidth = window.outerWidth;
   screenHeight = window.innerHeight;
@@ -203,7 +203,6 @@ function windowResize() {
   landing();
 };
 
-//Main setup Function
 function setup() {
   $('.close').click(function() {
     toggleNavbar();

@@ -1,0 +1,77 @@
+@import "variables";
+.saver.container {
+  margin-bottom: 20px;
+  hr {
+    height: 5px;
+    background-color: $medblue;
+    width: 60px;
+    margin: 20px 20px 20px 20px;
+  }
+  & > h1 {
+    font-family: $pfont;
+    font-size: 30px;
+    color: $darkblue;
+    margin: 20px 0px 0px 20px;
+  }
+  .row-m {
+    justify-content: center;
+    .col-3 {
+      margin: 10% 3% 0% 3%;
+      max-width: 300px;
+      flex-basis: 100%;
+      text-align: center;
+      .saverTitle {
+        color: $darkblue;
+        padding: 30px;
+        background-color: $medblue;
+        h1 {
+          font-family: $pfont;
+          font-size: 30px;
+          color: $white;
+        }
+        h4 {
+          color: $white;
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+      .saverList {
+        border-top: 1px;
+        border-right: 1px;
+        border-left: 1px;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: $lightgray;
+        padding: 10px;
+        & > ul li {
+          list-style-type: none;
+          color: $darkblue;
+          padding: 5px;
+          font-family: $pfont;
+          font-size: 15px;
+          &.disabled {
+            color: $lightgray;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 436px) {
+
+}
+
+@media only screen and (min-width: 620px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
