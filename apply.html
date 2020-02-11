@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/projecta.css">
   <link rel="stylesheet" href="css/master.css">
-  <title>Sonic Airlines - Search for a Flight</title>
+  <title>Sonic Airlines - Apply</title>
 </head>
 <body>
   <!-- Navbar -->
@@ -41,83 +41,41 @@
       <ul>
         <li class="close"><i class="fa fa-2x fa-close"></i></li>
         <li class="item"><a href="index.html">HOME</a></li>
-        <li class="item"><a href="apply.html">APPLY</a></li>
-        <li class="item"><a href="flyer.html">SONIC SAVERS</a></li>
-        <li class="item active"><a href="schedule.html">FLIGHT SEARCH</a></li>
+        <li class="item active"><a href="apply.html">APPLY</a></li>
+        <li class="item"><a href="flyer.html">FREQUENT FLYER</a></li>
+        <li class="item"><a href="schedule.html">FLIGHT SCHEDULES</a></li>
       </ul>
     </li>
   </ul>
 
   <!-- Content -->
   <div class="content">
-    <div class="flightBg">
-      <h2>Search for a Flight</h2>
-      <h3>We offer flights to and from Nebraska, Iowa, Colorado, Kansas, South Dakota, Wyoming, and Missouri.</h3>
-    </div>
-    <div class="container">
-      <div class="container flight">
-        <div class="flightInfo">
-          <div>
-            <p><span></span><i class="fa fa-caret-down"></i></p>
-            <ul class="hiddenSelect tripType">
-              <li class="active">Round Trip</li>
-              <li>One Way</li>
-            </ul>
-          </div>
-          <div>
-            <p><span></span> passengers</p>
-            <ul class="passengerSelect">
-              <li><i class="fa fa-plus"></i></li>
-              <li><i class="fa fa-minus"></i></li>
-            </ul>
-          </div>
-          <div>
-            <p><span></span><i class="fa fa-caret-down"></i></p>
-            <ul class="hiddenSelect economyType">
-              <li class="active">Economy</li>
-              <li>Premium Economy</li>
-              <li>Business Class</li>
-              <li>First Class</li>
-            </ul>
-          </div>
-          <div class="locationContainer">
-            <div class="location">
-              <p><span>Where from?</span></p>
-              <ul class="hiddenSelect">
-                <li><i class="fa fa-location"></i>Lincoln, NE</li>
-                <li>Des Moines, IA</li>
-                <li>Denver, CO</li>
-                <li>Wichita, KS</li>
-                <li>Sioux Falls, SD</li>
-                <li>Jackson, WY</li>
-                <li>St. Louis, MO</li>
-              </ul>
-            </div>
-            <i class="fa fa-plane fa-2x"></i>
-            <div class="location">
-              <p><span>Where to?</span></p>
-              <ul class="hiddenSelect">
-                <li>Lincoln, NE</li>
-                <li>Des Moines, IA</li>
-                <li>Denver, CO</li>
-                <li>Wichita, KS</li>
-                <li>Sioux Falls, SD</li>
-                <li>Jackson, WY</li>
-                <li>St. Louis, MO</li>
-              </ul>
-            </div>
-            <div class="dateContainer">
-              <input type="text" name="" value="">
-              <i class="fa fa-calendar fa-2x"></i>
-              <input type="text" name="" value="">
-            </div>
-          </div>
-          <div class="bookContainer">
-            <p>Price: $<span></span></p>
-            <button type="button" name="book" class="bookButton" onclick="bookFlight();">Search</button>
-          </div>
+    <div class="container apply">
+      <h2>Flight Attendant Application</h2>
+      <hr>
+      <h3>If applying for a pilot position please contact us directly at apply@sonicair.com</h3>
+      <form class="applyForm" action="apply.html" method="post">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Age">
+        <input type="text" placeholder="Title">
+        <div class="genderSelect">
+          <label class="customRadio">Male
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="customRadio">Female
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
         </div>
-      </div>
+        <textarea placeholder="Tell us a bit about yourself..."></textarea>
+        <textarea placeholder="How many languages do you speak on an intermediate level, or better?"></textarea>
+        <textarea placeholder="Why do you believe you can be a good flight attendant?"></textarea>
+        <textarea placeholder="What do you think characterize a great flight attendant nowadays?"></textarea>
+        <textarea placeholder="What do you think are the main duties of the flight attendants on the short distance and long distance flight?"></textarea>
+        <button type="button" name="book" class="submitButton">Submit</button>
+      </form>
     </div>
   </div>
 
@@ -164,7 +122,6 @@
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/projectarewrite.js"></script>
-  <script src="js/schedule.js"></script>
   <script src="js/master.js"></script>
 </body>
 </html>
