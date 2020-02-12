@@ -1,7 +1,7 @@
 let scroll;
 
 //use screenWidth, large, and medium from ProjectA for retreiving window width and breakpoints
-function changeTheme() {
+function changeTheme() { //Changes color of navbar on scroll down
   if(screenWidth > large) {
     if(scroll >= $('.nav').height()) {
       $('.nav').css('backgroundColor', '#0e1221');
@@ -24,7 +24,7 @@ function changeTheme() {
   }
 };
 
-$('.scrollDown').click(function(){
+$('.scrollDown').click(function(){ //Scrolls down the page when the chevron is clicked on the landing
   let scrollAmount = 0;
   if(screenWidth >= large) {
     scrollAmount = $('.landing').height() - $('.nav').height();

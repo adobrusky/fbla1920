@@ -1,10 +1,10 @@
-function hiddenSelection() {
+function hiddenSelection() { //Finds which element in a dropdown is active and sets the html of the dropdown to the active one
   $('.hiddenSelect').each(function() {
     $(this).siblings().children('span').html($(this).find('.active').html());
   })
 };
 
-$('.flightInfo p').click(function() {
+$('.flightInfo p').click(function() { //Opens and closes dropdowns
   if(!$(this).closest('div').hasClass('activeDrop')) {
     $('.hiddenSelect, .passengerSelect').closest('div').removeClass('activeDrop');
     $(this).closest('div').addClass('activeDrop');
@@ -13,7 +13,7 @@ $('.flightInfo p').click(function() {
   }
 });
 
-function setDates() {
+function setDates() { //Pulls todays date and parses it for entering the dates of the flight
   let today = new Date();
   let parseToday = today.toString().split(' ');
   today = parseToday[1] + ". " + parseToday[2] + " " + parseToday[3];
@@ -22,7 +22,7 @@ function setDates() {
   });
 }
 
-$('.hiddenSelect li').each(function() {
+$('.hiddenSelect li').each(function() { //Controls which element in the dropdown is active
   $(this).click(function() {
     if(!$(this).hasClass('active')) {
       $(this).siblings('.active').removeClass('active');
@@ -38,7 +38,7 @@ $('.hiddenSelect li').each(function() {
   });
 });
 
-function hiddenSelectionWidth() {
+function hiddenSelectionWidth() { //Sets the width for the dropdowns
   $('.flightInfo ul').each(function() {
     let test = $(this).siblings('p').outerWidth();
     $(this).animate({width : test });
@@ -46,7 +46,7 @@ function hiddenSelectionWidth() {
 }
 
 let passengers = 1;
-$('i.fa.fa-plus').click(function() {
+$('i.fa.fa-plus').click(function() { //Increases passengers
   if(passengers < 9) {
     passengers++;
     passengerSelection();
@@ -56,7 +56,7 @@ $('i.fa.fa-plus').click(function() {
 
 let price = 0;
 
-function makePrice() {
+function makePrice() { //Creates the price
   price = 0;
   price += passengers * 25;
   let trip = $('.tripType li').index('.active');
@@ -66,7 +66,7 @@ function makePrice() {
     price += 50;
   }
 
-  let economyChildren = $('.economyType li').length;
+  let economyChildren = $('.economyType li').length; //Determines which economy setting is active
   let activeEconomy = "";
   for(let i = 1; i <= economyChildren; i++) {
     if($('.economyType li:nth-child(' + i + ')').hasClass('active')) {
@@ -74,7 +74,7 @@ function makePrice() {
     }
   }
 
-  switch (activeEconomy){
+  switch (activeEconomy){ //Changes price with different economy settings
     case "Economy":
       price += 50;
       break;
@@ -91,7 +91,7 @@ function makePrice() {
   $('.bookContainer p span').html(price);
 }
 
-$('i.fa.fa-minus').click(function() {
+$('i.fa.fa-minus').click(function() { //Lowers amount of passengers
   if(passengers > 1) {
     passengers--;
     passengerSelection();
@@ -99,7 +99,7 @@ $('i.fa.fa-minus').click(function() {
   }
 });
 
-function passengerSelection() {
+function passengerSelection() { //Sets html to amount of passengers
   $('.passengerSelect').siblings().children('span').html(passengers);
 };
 
